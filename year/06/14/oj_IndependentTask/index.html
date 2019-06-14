@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="题目描述飞到oj  长江游艇俱乐部在长江上设置了n 个游艇出租站1，2，…，n。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站i 到游艇出租站j 之间的租金为r(i,j),1&amp;lt; =i&amp;lt; j &amp;lt; =n。试设计一个算法，计算出从游艇出租站1 到游艇出租站n 所需的最少租金。  输入 第1 行中有1 个正整数n（n&amp;lt;=200），表示有n个游艇出租">
+<meta name="description" content="题目描述飞到oj  用2 台处理机A 和B 处理n 个作业。设第i 个作业交给机器A 处理时需要时间i a ，若由机器B 来处理，则需要时间i b 。由于各作业的特点和机器的性能关系，很可能对于某些i，有ai &amp;gt;=bi，而对于某些j,j≠i，有aj &amp;lt; bj 。既不能将一个作业分开由2 台机器处理，也没有一台机器能同时处理2 个作业。设计一个动态规划算法，使得这2 台机器处理完这n个作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Renting Boats">
-<meta property="og:url" content="http://x-phantaci.cn/year/06/14/oj_RentingBoats/index.html">
+<meta property="og:title" content="Independent Task Scheduling">
+<meta property="og:url" content="http://x-phantaci.cn/year/06/14/oj_IndependentTask/index.html">
 <meta property="og:site_name" content="Phantaci’s blog">
-<meta property="og:description" content="题目描述飞到oj  长江游艇俱乐部在长江上设置了n 个游艇出租站1，2，…，n。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站i 到游艇出租站j 之间的租金为r(i,j),1&amp;lt; =i&amp;lt; j &amp;lt; =n。试设计一个算法，计算出从游艇出租站1 到游艇出租站n 所需的最少租金。  输入 第1 行中有1 个正整数n（n&amp;lt;=200），表示有n个游艇出租">
+<meta property="og:description" content="题目描述飞到oj  用2 台处理机A 和B 处理n 个作业。设第i 个作业交给机器A 处理时需要时间i a ，若由机器B 来处理，则需要时间i b 。由于各作业的特点和机器的性能关系，很可能对于某些i，有ai &amp;gt;=bi，而对于某些j,j≠i，有aj &amp;lt; bj 。既不能将一个作业分开由2 台机器处理，也没有一台机器能同时处理2 个作业。设计一个动态规划算法，使得这2 台机器处理完这n个作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-14T02:26:24.374Z">
+<meta property="og:updated_time" content="2019-06-14T11:36:24.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Renting Boats">
-<meta name="twitter:description" content="题目描述飞到oj  长江游艇俱乐部在长江上设置了n 个游艇出租站1，2，…，n。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站i 到游艇出租站j 之间的租金为r(i,j),1&amp;lt; =i&amp;lt; j &amp;lt; =n。试设计一个算法，计算出从游艇出租站1 到游艇出租站n 所需的最少租金。  输入 第1 行中有1 个正整数n（n&amp;lt;=200），表示有n个游艇出租">
+<meta name="twitter:title" content="Independent Task Scheduling">
+<meta name="twitter:description" content="题目描述飞到oj  用2 台处理机A 和B 处理n 个作业。设第i 个作业交给机器A 处理时需要时间i a ，若由机器B 来处理，则需要时间i b 。由于各作业的特点和机器的性能关系，很可能对于某些i，有ai &amp;gt;=bi，而对于某些j,j≠i，有aj &amp;lt; bj 。既不能将一个作业分开由2 台机器处理，也没有一台机器能同时处理2 个作业。设计一个动态规划算法，使得这2 台机器处理完这n个作">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://x-phantaci.cn/year/06/14/oj_RentingBoats/">
+  <link rel="canonical" href="http://x-phantaci.cn/year/06/14/oj_IndependentTask/">
 
 
 
 
 
-  <title>Renting Boats | Phantaci’s blog</title>
+  <title>Independent Task Scheduling | Phantaci’s blog</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_RentingBoats/">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_IndependentTask/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="phantaci">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Renting Boats</h1>
+          <h1 class="post-title" itemprop="name headline">Independent Task Scheduling</h1>
         
 
         <div class="post-meta">
@@ -308,7 +308,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  338
+                  349
                 </span>
               
 
@@ -345,23 +345,23 @@
       
 
       
-        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/574/417" target="_blank" rel="noopener">飞到oj</a></p>
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/698/433" target="_blank" rel="noopener">飞到oj</a></p>
 <blockquote>
-<p>长江游艇俱乐部在长江上设置了n 个游艇出租站1，2，…，n。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站i 到游艇出租站j 之间的租金为r(i,j),1&lt; =i&lt; j &lt; =n。试设计一个算法，计算出从游艇出租站1 到游艇出租站n 所需的最少租金。</p>
+<p>用2 台处理机A 和B 处理n 个作业。设第i 个作业交给机器A 处理时需要时间i a ，若由机器B 来处理，则需要时间i b 。由于各作业的特点和机器的性能关系，很可能对于某些i，有ai &gt;=bi，而对于某些j,j≠i，有aj &lt; bj 。既不能将一个作业分开由2 台机器处理，也没有一台机器能同时处理2 个作业。设计一个动态规划算法，使得这2 台机器处理完这n个作业的时间最短(从任何一台机器开工到最后一台机器停工的总时间)。研究一个实例： (a1,a2,a3,a4,a5,a6)＝(2,5,7,10,5,2)；(b1,b2,b3,b4,b5,b6)＝(3,8,4,11,3,4)。 对于给定的2 台处理机A 和B处理n 个作业，找出一个最优调度方案，使2台机器处理完这n 个作业的时间最短。</p>
 </blockquote>
 <h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
-<p>第1 行中有1 个正整数n（n&lt;=200），表示有n个游艇出租站。接下来的n-1 行是r(i,j),1&lt; =i&lt; j &lt; =n。</p>
+<p>的第1行是1个正整数n&lt;=200, 表示要处理n个作业。 接下来的2行中，每行有n 个正整数，分别表示处理机A 和B 处理第i 个作业需要的处理时间。</p>
 </blockquote>
 <h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
-<p>从游艇出租站1 到游艇出租站n所需的最少租金</p>
+<p>最短处理时间</p>
 </blockquote>
 <h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
-<p>3<br>5 15<br>7</p>
+<p>6<br>2 5 7 10 5 2<br>3 8 4 11 3 4</p>
 </blockquote>
 <h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
-<p>12</p>
+<p>15</p>
 </blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 205</span><br><span class="line">#define inf 0x3f3f3f</span><br><span class="line">int a[N][N];</span><br><span class="line">int DP[N][N];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i = 1 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        //自己到自己不花钱 </span><br><span class="line">        a[i][i] = 0; </span><br><span class="line">        for(int j = i + 1 ; j &lt;= n; j++)&#123;</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        就还是挺简单的</span><br><span class="line">        emm嗯 </span><br><span class="line">    */ </span><br><span class="line">    for(int i = 2 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        for(int j = 1 ; j &lt;= i ; j++)&#123;</span><br><span class="line">            if(a[1][i] &gt; a[1][j] + a[j][i])&#123;</span><br><span class="line">                a[1][i] = a[1][j] + a[j][i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;a[1][n]&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -386,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/year/06/14/oj_soldiesr/" rel="next" title="Soldiers">
-                <i class="fa fa-chevron-left"></i> Soldiers
+              <a href="/year/06/14/Test/" rel="next" title="终于开始发博客辣">
+                <i class="fa fa-chevron-left"></i> 终于开始发博客辣
               </a>
             
           </div>
@@ -395,10 +395,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/year/06/14/oj_JackStraws/" rel="prev" title="Jack Straws">
-                Jack Straws <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
