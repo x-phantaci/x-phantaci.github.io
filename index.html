@@ -305,7 +305,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  74
+                  14
                 </span>
               
 
@@ -344,8 +344,1176 @@
       
         
           
-            <p>所以这是吃饱了开始下食了~<br>Surprise~<br>土豆太硬啦辣椒太辣啦我好撑啊！！</p>
-<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊!</p>
+            <p>要是又更简单的记得跟我说一声~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_简单背包/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_简单背包/" itemprop="url">简单背包问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  384
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/32/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>设有一个背包可以放入的物品重量为S，现有n件物品，重量分别是w1，w2，w3…wn。<br>问能否从这n件物品中选择若干件放入背包中，使得放入的重量之和正好为S。<br>如果有满足条件的选择，则此背包有解，否则此背包问题无解。</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>输入数据有多行，包括放入的物品重量为s，物品的件数n，以及每件物品的重量（入数据均为正整数）<br>多组测试数据。</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>对于每个测试实例，若满足条件则输出“YES”，若不满足则输出“NO“</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>20 5<br>1 3 5 7 9</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>YES</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 1000</span><br><span class="line">int a[N];</span><br><span class="line">int DP(int s, int now)&#123;</span><br><span class="line">    //背包装满  </span><br><span class="line">    if(s == 0)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    //背包装多了 或者 背包还没装满但是没有东西了 </span><br><span class="line">    else if(s &lt; 0 || (s &gt; 0 &amp;&amp; now &lt;= 0))&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    //如果装了第now个物品可以装满 那就去装吧 </span><br><span class="line">    else if(DP(s - a[now ] , now - 1))&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    //不装第now个，去找下一个 </span><br><span class="line">    else</span><br><span class="line">        return DP(s,now - 1);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int s,n;</span><br><span class="line">    //看清楚啊多组输入啊 </span><br><span class="line">    while(cin&gt;&gt;s&gt;&gt;n)&#123;</span><br><span class="line">        //多组输入要初始化 </span><br><span class="line">        memset(a,0,sizeof(a));</span><br><span class="line">        for(int i = 1 ; i &lt;= n ; i++)</span><br><span class="line">            cin&gt;&gt;a[i];</span><br><span class="line">        if(DP(s,n))</span><br><span class="line">            cout&lt;&lt;&quot;YES&quot;&lt;&lt;endl;</span><br><span class="line">        else</span><br><span class="line">            cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_Buyer/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_Buyer/" itemprop="url">Buyer</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  401
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/195/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>哆啦A梦班级举办个party，当然吃的东西必不可少，哆啦A梦负责采购任务，他得到了一份清单，上面注明不同食品的受欢迎程度，哆啦A梦需要用一定的价钱尽可能达到的更大的受欢迎程度！例如，瓜子的受欢迎程度为20，瓜子的价钱是50元，那么如果哆啦A梦选择买瓜子，将花费50元，但受欢迎程度增加了20。为了避免食品单调性，每种食品只能买一份，不能重复购买。 现在哆啦A梦需要知道如何采购才能达到最大的受欢迎程度，你能帮助他吗？</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>输入数据为多组，每组输入的第一行有两个正整数M和N(M&lt;100&amp;&amp;N&lt;1000)，分别为哆啦A梦可以支配的钱数和清单上的可选择的物品种类。 接下来的N行每行有两个正整数,分别为每种物品的价钱和它的受欢迎程度（编号为1到N）。</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>如果存在物品购买，那么输出的第一行为能够达到的最大的受欢迎程度。第二行为需要购买的物品的编号（如果有多种可能，输出字典序靠前的那种），空格分隔每个数字；如没有物品可以购买，输出只有一行，为数字0。</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>10 4<br>100 5<br>5 5<br>5 5<br>10 10</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>10<br>2 3</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个也先等一下~</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_Coin-CollectingByRobot/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_Coin-CollectingByRobot/" itemprop="url">Coin-collecting by robot</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  355
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/1132/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>Several coins are placed in cells of an n×m board. A robot, located in the upper left cell of the board, needs to collect as many of the coins as possible and bring them to the bottom right cell. On each step, the robot can move either one cell to the right or one cell down from its current location.</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>The fist line is n,m, which 1&lt; = n,m &lt;= 1000.<br>Then, have n row and m col, which has a coin in cell, the cell number is 1, otherwise is 0.</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>The max number Coin-collecting by robot.</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>5 6<br>0 0 0 0 1 0<br>0 1 0 1 0 0<br>0 0 0 1 0 1<br>0 0 1 0 0 1<br>1 0 0 0 1 0</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>5</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 1006</span><br><span class="line">int a[N][N];</span><br><span class="line">int b[N][N];</span><br><span class="line">/*</span><br><span class="line">    题目大意：要从左上走到游右下，只能向右或者向下走，路上有金币，最多能吃多少金币</span><br><span class="line">    输入1代表当前的格格里面有金币 </span><br><span class="line">*/</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i = 1 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        for(int j = 1; j &lt;= m; j++)&#123;</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i = 1 ; i &lt;= n; i++)&#123;</span><br><span class="line">        for(int j = 1 ; j &lt;= m; j++)&#123;</span><br><span class="line">            /*</span><br><span class="line">                来的时候是选择右下，回去的时候选择左上 </span><br><span class="line">                是选择左边的格格还是选择上边的格格 </span><br><span class="line">            */ </span><br><span class="line">            b[i][j] = max(b[i - 1][j] , b[i][j - 1]) + a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">    /*PE这么多吗交太久我都忘记了*/ </span><br><span class="line">    printf(&quot;%d\r\n&quot; , b[n][m]); </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_CoinChanging/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_CoinChanging/" itemprop="url">Coin Changing</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  437
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/575/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>设有n 种不同面值的硬币，各硬币的面值存于数组T［1:n］中。现要用这些面值的硬币来找钱。可以使用的各种面值的硬币个数存于数组Coins［1:n］中。 对于给定的1≤n≤10，硬币面值数组T和可以使用的各种面值的硬币个数数组Coins，以及钱数m，0≤m≤20001，编程计算找钱m的最少硬币数。</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>第一行中只有1 个整数给出n的值,第2 行起每行2 个数，分别是T[j]和Coins[j]。最后1 行是要找的钱数m。</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>最少硬币数,无解时输出-1</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>3<br>1 3<br>2 3<br>5 3<br>18</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>5</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 20005</span><br><span class="line">#define inf 0x7ffff</span><br><span class="line">int val[N],F[N];</span><br><span class="line">int t[N],coins[N];</span><br><span class="line">/*</span><br><span class="line">    其实还有一种思路就是把所有的硬币都放到一个数组里面然后就变成了0-1背包</span><br><span class="line">    好了你们要是写好了告诉我一下我不想写了 </span><br><span class="line">*/ </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i = 1 ; i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;t[i]&gt;&gt;coins[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cin&gt;&gt;m;</span><br><span class="line">    //要比较最小值还是让他们都变成超级大的值⑧ </span><br><span class="line">    for(int i = 1 ; i &lt;= m ; i++)</span><br><span class="line">        F[i] = inf;</span><br><span class="line">    //遍历n中不同面值的硬币 </span><br><span class="line">    for(int i = 1 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        </span><br><span class="line">        //遍历当前面值下的硬币的个数</span><br><span class="line">        for(int j = 1; j &lt;= coins[i] ; j++)&#123;</span><br><span class="line">            </span><br><span class="line">            /*</span><br><span class="line">                这里是重点哦不要记错 </span><br><span class="line">            */ </span><br><span class="line">            for(int k = m ; k &gt;= t[i] ; k--)&#123; </span><br><span class="line">                F[k] = min(F[k] , F[k - t[i]] + 1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    if(F[m] &lt; m)</span><br><span class="line">        cout&lt;&lt;F[m]&lt;&lt;endl;</span><br><span class="line">    else</span><br><span class="line">        cout&lt;&lt;&quot;-1&quot;&lt;&lt;endl; </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_Coin-row/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_Coin-row/" itemprop="url">Coin-row problem</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  272
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/1139/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>There is a row of n coins whose values are some positive integers c₁, c₂,…,cn, not necessarily distinct. The goal is to pick up the maximum amount of money subject to the constraint that no two coins adjacent in the initial row can be picked up.</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>Two lines, the first line is n (0&lt; n &lt;=10000), and the second line is value of coin(0&lt; value &lt;= 2^32).</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>the maximum amount of money.</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>6<br>5 1 2 10 6 2</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>17</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 10005</span><br><span class="line">int a[N];</span><br><span class="line">int b[N];</span><br><span class="line">/*</span><br><span class="line">    想不到吧代码就是这么少 </span><br><span class="line">    题目大意：拿硬币但是不可以拿相邻的哦 </span><br><span class="line">*/</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i = 1 ; i &lt;= n ;i++)&#123;</span><br><span class="line">        cin&gt;&gt;a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    //从i=2开始,0和1做处理 </span><br><span class="line">    b[0] = 0 ;</span><br><span class="line">    b[1] = a[1];</span><br><span class="line">    for(int i = 2  ; i &lt;= n ; i++)&#123;</span><br><span class="line">        /*</span><br><span class="line">            选择拿不拿当前这个 </span><br><span class="line">            拿了就去看看与他相差两个的</span><br><span class="line">            不拿就去看与他相差一个的 </span><br><span class="line">        */ </span><br><span class="line">        b[i] = max(b[i - 1] , b[i - 2] + a[i] );</span><br><span class="line">    &#125;</span><br><span class="line">    //快乐PE(这次不是没看清题的锅) </span><br><span class="line">    printf(&quot;%d\r\n&quot;,b[n]);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_JackStraws/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_JackStraws/" itemprop="url">Jack Straws</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  385
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/680/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>n the game of Jack Straws, a number of plastic or wooden “straws” are dumped on the table and players try to remove them one-by-one without disturbing the other straws. Here, we are only concerned with if various pairs of straws are connected by a path of touching straws. You will be given a list of the endpoints for some straws (as if they were dumped on a large piece of graph paper) and then will be asked if various pairs of straws are connected. Note that touching is connecting, but also two straws can be connected indirectly via other connected straws.</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>A problem consists of multiple lines of input. The first line will be an integer n (1 &lt; n &lt; 13) giving the number of straws on the table. Each of the next n lines contain 4 positive integers, x1 , y1 , x2 and y2 , giving the coordinates, (x1 ; y1 ); (x2 ; y2 ) of the endpoints of a single straw. All coordinates will be less than 100. (Note that the straws will be of varying lengths.) The first straw entered will be known as straw #1, the second as straw #2, and so on. The remaining lines of input (except for the final line) will each contain two positive integers, a and b, both between 1 and n, inclusive. You are to determine if straw a can be connected to straw b. When a = 0 = b, the input is terminated. There will be no illegal input and there are no zero-length straws.</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>You should generate a line of output for each line containing a pair a and b, except the final line where a = 0 = b. The line should say simply “CONNECTED”, if straw a is connected to straw b, or “NOT CONNECTED”, if straw a is not connected to straw b. For our purposes, a straw is considered connected to itself.</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>7<br>1 6 3 3<br>4 6 4 9<br>4 5 6 7<br>1 4 3 5<br>3 5 5 5<br>5 2 6 3<br>5 4 7 2<br>1 4<br>1 6<br>3 3<br>6 7<br>2 3<br>1 3<br>0 0</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>CONNECTED<br>NOT CONNECTED<br>CONNECTED<br>CONNECTED<br>NOT CONNECTED<br>CONNECTED</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个先不慌我先去研究一个更简单的</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_RentingBoats/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="phantaci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Phantaci’s blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/year/06/14/oj_RentingBoats/" itemprop="url">Renting Boats</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-14T00:00:00+08:00">
+                2019-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  338
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/574/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>长江游艇俱乐部在长江上设置了n 个游艇出租站1，2，…，n。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站i 到游艇出租站j 之间的租金为r(i,j),1&lt; =i&lt; j &lt; =n。试设计一个算法，计算出从游艇出租站1 到游艇出租站n 所需的最少租金。</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>第1 行中有1 个正整数n（n&lt;=200），表示有n个游艇出租站。接下来的n-1 行是r(i,j),1&lt; =i&lt; j &lt; =n。</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>从游艇出租站1 到游艇出租站n所需的最少租金</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>3<br>5 15<br>7</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>12</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 205</span><br><span class="line">#define inf 0x3f3f3f</span><br><span class="line">int a[N][N];</span><br><span class="line">int DP[N][N];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i = 1 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        //自己到自己不花钱 </span><br><span class="line">        a[i][i] = 0; </span><br><span class="line">        for(int j = i + 1 ; j &lt;= n; j++)&#123;</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        就还是挺简单的</span><br><span class="line">        emm嗯 </span><br><span class="line">    */ </span><br><span class="line">    for(int i = 2 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        for(int j = 1 ; j &lt;= i ; j++)&#123;</span><br><span class="line">            if(a[1][i] &gt; a[1][j] + a[j][i])&#123;</span><br><span class="line">                a[1][i] = a[1][j] + a[j][i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;a[1][n]&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -429,7 +1597,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -484,7 +1652,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74</span>
+    <span title="Site words total count">2.6k</span>
   
 </div>
 

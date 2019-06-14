@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="要是又更简单的记得跟我说一声~">
+<meta name="description" content="题目描述飞到oj  Several coins are placed in cells of an n×m board. A robot, located in the upper left cell of the board, needs to collect as many of the coins as possible and bring them to the bottom right">
 <meta property="og:type" content="article">
-<meta property="og:title" content="终于开始发博客辣">
-<meta property="og:url" content="http://x-phantaci.cn/year/06/14/Test/index.html">
+<meta property="og:title" content="Coin-collecting by robot">
+<meta property="og:url" content="http://x-phantaci.cn/year/06/14/oj_Coin-CollectingByRobot/index.html">
 <meta property="og:site_name" content="Phantaci’s blog">
-<meta property="og:description" content="要是又更简单的记得跟我说一声~">
+<meta property="og:description" content="题目描述飞到oj  Several coins are placed in cells of an n×m board. A robot, located in the upper left cell of the board, needs to collect as many of the coins as possible and bring them to the bottom right">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-14T02:33:06.224Z">
+<meta property="og:updated_time" content="2019-06-14T01:53:20.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="终于开始发博客辣">
-<meta name="twitter:description" content="要是又更简单的记得跟我说一声~">
+<meta name="twitter:title" content="Coin-collecting by robot">
+<meta name="twitter:description" content="题目描述飞到oj  Several coins are placed in cells of an n×m board. A robot, located in the upper left cell of the board, needs to collect as many of the coins as possible and bring them to the bottom right">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://x-phantaci.cn/year/06/14/Test/">
+  <link rel="canonical" href="http://x-phantaci.cn/year/06/14/oj_Coin-CollectingByRobot/">
 
 
 
 
 
-  <title>终于开始发博客辣 | Phantaci’s blog</title>
+  <title>Coin-collecting by robot | Phantaci’s blog</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/Test/">
+    <link itemprop="mainEntityOfPage" href="http://x-phantaci.cn/year/06/14/oj_Coin-CollectingByRobot/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="phantaci">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">终于开始发博客辣</h1>
+          <h1 class="post-title" itemprop="name headline">Coin-collecting by robot</h1>
         
 
         <div class="post-meta">
@@ -308,7 +308,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  14
+                  355
                 </span>
               
 
@@ -345,7 +345,23 @@
       
 
       
-        <p>要是又更简单的记得跟我说一声~</p>
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/1132/417" target="_blank" rel="noopener">飞到oj</a></p>
+<blockquote>
+<p>Several coins are placed in cells of an n×m board. A robot, located in the upper left cell of the board, needs to collect as many of the coins as possible and bring them to the bottom right cell. On each step, the robot can move either one cell to the right or one cell down from its current location.</p>
+</blockquote>
+<h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
+<p>The fist line is n,m, which 1&lt; = n,m &lt;= 1000.<br>Then, have n row and m col, which has a coin in cell, the cell number is 1, otherwise is 0.</p>
+</blockquote>
+<h1 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h1><blockquote>
+<p>The max number Coin-collecting by robot.</p>
+</blockquote>
+<h1 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h1><blockquote>
+<p>5 6<br>0 0 0 0 1 0<br>0 1 0 1 0 0<br>0 0 0 1 0 1<br>0 0 1 0 0 1<br>1 0 0 0 1 0</p>
+</blockquote>
+<h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
+<p>5</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 1006</span><br><span class="line">int a[N][N];</span><br><span class="line">int b[N][N];</span><br><span class="line">/*</span><br><span class="line">    题目大意：要从左上走到游右下，只能向右或者向下走，路上有金币，最多能吃多少金币</span><br><span class="line">    输入1代表当前的格格里面有金币 </span><br><span class="line">*/</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n,m;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i = 1 ; i &lt;= n ; i++)&#123;</span><br><span class="line">        for(int j = 1; j &lt;= m; j++)&#123;</span><br><span class="line">            cin&gt;&gt;a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i = 1 ; i &lt;= n; i++)&#123;</span><br><span class="line">        for(int j = 1 ; j &lt;= m; j++)&#123;</span><br><span class="line">            /*</span><br><span class="line">                来的时候是选择右下，回去的时候选择左上 </span><br><span class="line">                是选择左边的格格还是选择上边的格格 </span><br><span class="line">            */ </span><br><span class="line">            b[i][j] = max(b[i - 1][j] , b[i][j - 1]) + a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">    /*PE这么多吗交太久我都忘记了*/ </span><br><span class="line">    printf(&quot;%d\r\n&quot; , b[n][m]); </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -370,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/year/06/14/oj_简单背包/" rel="next" title="简单背包问题">
-                <i class="fa fa-chevron-left"></i> 简单背包问题
+              <a href="/year/06/14/oj_CoinChanging/" rel="next" title="Coin Changing">
+                <i class="fa fa-chevron-left"></i> Coin Changing
               </a>
             
           </div>
@@ -379,6 +395,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/year/06/14/oj_Buyer/" rel="prev" title="Buyer">
+                Buyer <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -430,8 +450,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -475,6 +504,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入"><span class="nav-number">2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输出"><span class="nav-number">3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样例输入"><span class="nav-number">4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样例输出"><span class="nav-number">5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">6.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
