@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Phantaci’s blog">
 <meta property="og:description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-14T11:35:00.867Z">
+<meta property="og:updated_time" content="2019-06-14T16:14:27.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Edit Distance">
 <meta name="twitter:description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
@@ -308,7 +308,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  215
+                  382
                 </span>
               
 
@@ -361,7 +361,7 @@
 <h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
 <p>5</p>
 </blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt; </span><br><span class="line">using namespace std;</span><br><span class="line">#define N 2005</span><br><span class="line">int dp[N][N];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //快乐裸DP </span><br><span class="line">    char a[N];</span><br><span class="line">    char b[N];</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    int lena = strlen(a);</span><br><span class="line">    int lenb = strlen(b);</span><br><span class="line">    for(int i = 1 ; i &lt;= lena ; i++)</span><br><span class="line">        dp[i][0] = i;</span><br><span class="line">    for( int j = 1 ; j &lt;= lenb ; j++)</span><br><span class="line">        dp[0][j] = j;</span><br><span class="line">    for(int i = 1 ; i &lt;= lena ; i++)&#123;</span><br><span class="line">        for(int j = 1 ; j &lt;= lenb ; j++)&#123;</span><br><span class="line">            int Insert = dp[i][j - 1] + 1;//左 </span><br><span class="line">            int Delete = dp[i - 1][j] + 1;//右 </span><br><span class="line">            int Replace = dp[i - 1][ j - 1];//左上 </span><br><span class="line">            //对应的元字符相等，原问题较为子问题，不用++ </span><br><span class="line">            //不相等，操作++ </span><br><span class="line">            if(a[ i - 1] != b[j - 1]) </span><br><span class="line">                Replace ++;</span><br><span class="line">            //比较最小 </span><br><span class="line">            dp[i][j] = min(Replace , min(Insert , Delete));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;dp[lena][lenb]&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -386,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/year/06/14/oj_Arbitrage/" rel="next" title="Arbitrage">
-                <i class="fa fa-chevron-left"></i> Arbitrage
+              <a href="/year/06/14/oj_Coin-CollectingByRobot/" rel="next" title="Coin-collecting by robot">
+                <i class="fa fa-chevron-left"></i> Coin-collecting by robot
               </a>
             
           </div>
@@ -548,7 +548,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.9k</span>
+    <span title="Site words total count">6.1k</span>
   
 </div>
 
