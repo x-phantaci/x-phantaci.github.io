@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
+<meta name="description" content="题目描述飞到oj  设A 和B 是2 个字符串。要用最少的字符操作将字符串A 转换为字符串B。这里所说的字符操作包括 (1)删除一个字符； (2)插入一个字符； (3)将一个字符改为另一个字符。 将字符串A变换为字符串B 所用的最少字符操作数称为字符串A到B 的编辑距离，记为d(A,B)。试设计一个有效算法，对任给的2 个字符串A和B，计算出它们  输入 第一行是字符串A，文件的第二行是字符串B。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Edit Distance">
 <meta property="og:url" content="http://x-phantaci.cn/year/06/14/oj_EditDistance/index.html">
 <meta property="og:site_name" content="Phantaci’s blog">
-<meta property="og:description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
+<meta property="og:description" content="题目描述飞到oj  设A 和B 是2 个字符串。要用最少的字符操作将字符串A 转换为字符串B。这里所说的字符操作包括 (1)删除一个字符； (2)插入一个字符； (3)将一个字符改为另一个字符。 将字符串A变换为字符串B 所用的最少字符操作数称为字符串A到B 的编辑距离，记为d(A,B)。试设计一个有效算法，对任给的2 个字符串A和B，计算出它们  输入 第一行是字符串A，文件的第二行是字符串B。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-14T16:14:27.979Z">
+<meta property="og:updated_time" content="2019-06-15T10:46:19.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Edit Distance">
-<meta name="twitter:description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
+<meta name="twitter:description" content="题目描述飞到oj  设A 和B 是2 个字符串。要用最少的字符操作将字符串A 转换为字符串B。这里所说的字符操作包括 (1)删除一个字符； (2)插入一个字符； (3)将一个字符改为另一个字符。 将字符串A变换为字符串B 所用的最少字符操作数称为字符串A到B 的编辑距离，记为d(A,B)。试设计一个有效算法，对任给的2 个字符串A和B，计算出它们  输入 第一行是字符串A，文件的第二行是字符串B。">
 
 
 
@@ -308,7 +308,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  382
+                  358
                 </span>
               
 
@@ -347,7 +347,7 @@
       
         <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><a href="http://acm.swust.edu.cn/#/problems/697/433" target="_blank" rel="noopener">飞到oj</a></p>
 <blockquote>
-<p>在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。</p>
+<p>设A 和B 是2 个字符串。要用最少的字符操作将字符串A 转换为字符串B。这里所说的字符操作包括 (1)删除一个字符； (2)插入一个字符； (3)将一个字符改为另一个字符。 将字符串A变换为字符串B 所用的最少字符操作数称为字符串A到B 的编辑距离，记为d(A,B)。试设计一个有效算法，对任给的2 个字符串A和B，计算出它们</p>
 </blockquote>
 <h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><blockquote>
 <p>第一行是字符串A，文件的第二行是字符串B。字符串长度不大于2000。</p>
