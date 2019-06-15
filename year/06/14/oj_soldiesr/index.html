@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Phantaci’s blog">
 <meta property="og:description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-14T11:33:28.013Z">
+<meta property="og:updated_time" content="2019-06-15T00:48:18.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Soldiers">
 <meta name="twitter:description" content="题目描述飞到oj  在一个划分成网格的操场上，n个士兵散乱地站在网格点上。网格点由整数坐标(x,y)表示。士兵们可以沿网格边上、下、左、右移动一步，但在同一时刻任一网格点上只能有一名士兵。按照军官的命令，士兵们要整齐地列成一个水平队列，即排列成(x,y),(x+1,y),…,(x+n-1,y)。如何选择x 和y的值才能使士兵们以最少的总移动步数排成一列。计算使所有士兵排成一行需要的最少移动步数。">
@@ -308,7 +308,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  244
+                  452
                 </span>
               
 
@@ -324,7 +324,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -361,7 +361,7 @@
 <h1 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h1><blockquote>
 <p>8</p>
 </blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define N 10005</span><br><span class="line">int x[N];</span><br><span class="line">int X[N];</span><br><span class="line">int y[N];</span><br><span class="line">int a[N];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    /*</span><br><span class="line">        站成水平队列，y一样x变化</span><br><span class="line">        所以中心位置的y轴就可以选取原来士兵位置的中间数</span><br><span class="line">        x变化即变化为 x..x+1..x+2..x+3....x+n</span><br><span class="line">        所以变化后的每一个士兵的位置就是 x..x+1..x+2..x+3....x+n</span><br><span class="line">        此时的X[]是每一个士兵要移动的步数 </span><br><span class="line">    */ </span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i = 0 ; i &lt; n ; i++)</span><br><span class="line">        cin&gt;&gt;x[i]&gt;&gt;y[i];</span><br><span class="line">    sort(x,x + n);</span><br><span class="line">    sort(y,y + n);</span><br><span class="line">    int NumY = y[n / 2];</span><br><span class="line">    for(int i = 0 ; i &lt; n ; i++)</span><br><span class="line">        X[i] = x[i] - i;</span><br><span class="line">    sort(X,X + n);</span><br><span class="line">    int NumX = X[ n / 2];</span><br><span class="line">    int sum = 0 ;</span><br><span class="line">    for(int i = 0 ; i &lt; n ; i++)&#123;</span><br><span class="line">        sum += (abs(X[i] - NumX) + abs(y[i] - NumY));</span><br><span class="line">    &#125; </span><br><span class="line">    cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -396,8 +396,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/year/06/14/oj_RentingBoats/" rel="prev" title="Renting Boats">
-                Renting Boats <i class="fa fa-chevron-right"></i>
+              <a href="/year/06/14/oj_JackStraws/" rel="prev" title="Jack Straws">
+                Jack Straws <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -548,7 +548,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.1k</span>
+    <span title="Site words total count">7.1k</span>
   
 </div>
 
